@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Marketing Analysis(Subscribed for term deposit or not)</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='bank.png') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Marketing Analysis(Subscribed for term deposit or not)</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="age" placeholder="Age (eg:24)"><br>
+                <input class="form-input" type="text" name="job" placeholder="job (student:0, retired:1, unemployed:2, management:3, unknown:4, admin.:5,self-employed:6, technician:7, services:8, housemaid:9, entrepreneur:10,blue-collar:11L) "><br>
+                <input class="form-input" type="text" name="marital" placeholder="marital(single:0, divorced:1, married:2 "><br>
+                <input class="form-input" type="text" name="education" placeholder="education(tertiary:0, unknown:1, secondary:2, primary:3"><br>
+                <input class="form-input" type="text" name="balance" placeholder="balance (eg:4087)"><br>
+                <input class="form-input" type="text" name="housing" placeholder="housing(no:0,yes:1)"><br>
+                <input class="form-input" type="text" name="loan" placeholder="loan(no:0,yes:1)"><br>
+                <input class="form-input" type="text" name="contact" placeholder="contact (cellular:0, telephone:1, unknown:2)"><br>
+                <input class="form-input" type="text" name="day" placeholder="day eg:21)"><br>
+                <input class="form-input" type="text" name="month" placeholder="month (1 to 12)"><br>
+                <input class="form-input" type="text" name="duration" placeholder="duration (eg.1033)"><br>
+                <input class="form-input" type="text" name="campaign" placeholder="campaign (eg. 6)"><br>
+                <input class="form-input" type="text" name="previous" placeholder="previous (eg 3)"><br>
+                <input class="form-input" type="text" name="poutome" placeholder="poutome (eg:4)"><br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+       
+
+    </body>
+</html>
