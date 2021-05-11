@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Marketing Analysis(Subscribed for term deposit or not)</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='bank.png') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Marketing Analysis(Subscribed for term deposit or not)</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Great! client subscribe for term deposit</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='Yes_4G_Logo.png') }}" alt="Yes Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Nope! Client DON'T subscribe for term deposit.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='blog-say-no.png') }}" alt="No Image">
+			{% endif %}
+		</div>
+
+		
+
+	</body>
+</html>
